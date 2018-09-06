@@ -18,6 +18,9 @@ echo 'Code Templates Done!\n'
 cp ~/.gitconfig $(dirname "$0")/.gitconfig
 echo 'gitignore Done!\n'
 
+cp ~/.gitignore_global $(dirname "$0")/.gitignore_global
+echo 'gitignore_global Done!\n'
+
 
 
 echo 'ALL Done!\nSave to :' $(dirname "$0")
