@@ -1,0 +1,8 @@
+@reboot /home/howpwn/Desktop/mine/cpu.sh
+
+0 0 * * 0 sudo apt-get update
+0 0 * * 0 sudo apt-get -y upgrade
+0 0 * * 0 sudo apt-get -y dist-upgrade
+0 0 * * 0 sudo apt-get -y install --fix-missing
+0 0 * * 0 sudo apt-get -y autoremove
+0 0 * * 0 sudo apt-get -y autoclean
