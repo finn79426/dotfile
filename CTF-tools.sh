@@ -20,6 +20,14 @@ sudo apt-fast -y install 	gdb \
 							ltrace \
 							nmap
 
+echo -n "Do you want to keep install large tools ?"
+read YN
+if echo "$YN" | grep -iq "y" ;then
+	:
+else
+	exit 0
+fi
+
 # pwntools (python 2.7)
 sudo -H pip2 install --upgrade pip
 sudo -H pip2 install --upgrade pwntools
@@ -56,6 +64,46 @@ sudo make ~/.Tools/PKcrack/src
 cd ~/.Tools/PKcrack/src &&  mv extract findkey makekey pkcrack zipdecrypt ../ && cd $(dirname "$0")
 
 # HashPump
+git clone https://github.com/bwall/HashPump.git ~/.Tools/Hashpump
+sudo make ~/.Tools/Hashpump
+sudo make install ~/.Tools/Hashpump
+rm -rf ~/.Tools/Hashpump
+
+# libnum
+git clone https://github.com/hellman/libnum ~/.Tools/libnum
+python ~/.Tool/libnum/setup.py install
+rm -rf ~/.Tools/libnum
+
+# factordb-pycli
+sudo -H pip2 install factordb-pycli
+
+# EasyWebSolver
+sudo gem install colorize
+git clone https://github.com/w181496/EasySolver.git ~/.Tools/EasyWebSolver
+
+# SQLmap
+sudo apt-get install -y sqlmap
+
+# tplmap
+sudo -H pip2 install pyyaml
+git clone https://github.com/epinna/tplmap.git ~/.Tools/tplmap
+
+# commix
+git clone https://github.com/commixproject/commix.git ~/.Tools/commix
+
+# GitHacker
+sudo -H pip2 install requests
+git clone https://github.com/wangyihang/GitHacker.git ~/.Tools/GitHacker
+
+# foremost
+sudo apt-get install -y foremost
+
+# binwalk
+sudo apt-get install -y binwalk
+
+# ngrok
+echo "Ngrok 需要手動下載 Binary"
+mkdir ~/Tools/ngrok
 
 # gdb
 git clone https://github.com/longld/peda.git --depth 1 ~/.Tools/peda

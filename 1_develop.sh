@@ -8,8 +8,10 @@ sudo apt-fast install 	python-pip \
 						npm \
 						default-jre \
 						default-jdk \
+						php \
+						ruby \
 						make \
-						cmake
+						cmake \
 
 pip install --upgrade virtualenv
 
