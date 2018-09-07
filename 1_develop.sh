@@ -2,8 +2,7 @@
 # By : howpwn
 # Email : finn79426@gmail.com
 
-sudo apt-fast install 	cmake \
-						python-pip \
+sudo apt-fast install 	python-pip \
 						python3-pip \
 						python-dev \
 						build-essential \
@@ -11,7 +10,9 @@ sudo apt-fast install 	cmake \
 						nodejs \
 						npm \
 						default-jre \
-						default-jdk
+						default-jdk \
+						make \
+						cmake
 
 pip install --upgrade virtualenv
 
