@@ -10,4 +10,4 @@ sudo apt-get -y autoclean
 sudo add-apt-repository -y ppa:apt-fast/stable
 sudo apt-get -y install apt-fast
 # Common tools
-sudo apt-fast -y install git wget curl tmux
+sudo apt-fast -y install git wget curl vim tmux powerline
