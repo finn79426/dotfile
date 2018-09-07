@@ -62,7 +62,7 @@ set guioptions-=b
 set tabstop=4			" 設置table長度
 set shiftwidth=4		" 同上
 set showtabline=0		" 隱藏頂部標籤欄
-set guifont=Menlo\ for\ Powerline			" 設置字體
+set guifont=Source\ Code\ Pro\ Regular		" 設置字體
 syntax on				" 開啟語法高亮
 set nowrap				" 設置字數過長時不換行
 set fileformat=unix		" 設置以unix的格式保存文件
