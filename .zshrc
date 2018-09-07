@@ -8,7 +8,7 @@ alias wea='curl http://wttr.in/taipei?lang=zh -s | head -n 17'
 alias rm='sudo rm'
 # alias lan='sudo pon dsl-provider'
 # alias umountbackup='umount /media/howpwn/Backup'
-alias apt-get="sudo apt-get"
+alias apt-get="sudo apt-fast"
 alias vimPlug='vim +PluginInstall +qall'
 alias va='vagrant'
 alias npm='sudo npm'
