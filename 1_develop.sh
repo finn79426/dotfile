@@ -8,12 +8,10 @@ sudo apt-fast install 	cmake \
 						python-dev \
 						build-essential \
 						virtualenvwrapper \
-						libffi-dev \
 						nodejs \
 						npm \
 						default-jre \
-						default-jdk \
-						libc6-i386
+						default-jdk
 
 pip install --upgrade virtualenv
 
