@@ -12,7 +12,8 @@ sudo apt-fast install 	cmake \
 						nodejs \
 						npm \
 						default-jre \
-						default-jdk
+						default-jdk \
+						libc6-i386
 
 pip install --upgrade virtualenv
 
