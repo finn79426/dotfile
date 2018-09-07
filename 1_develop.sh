@@ -4,9 +4,6 @@
 
 sudo apt-fast install 	python-pip \
 						python3-pip \
-						python-dev \
-						build-essential \
-						virtualenvwrapper \
 						nodejs \
 						npm \
 						default-jre \

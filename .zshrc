@@ -64,6 +64,14 @@ function cd {
 ZSH_THEME="agnoster"
 eval `dircolors ~/.dir_colors/dircolors`
 
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
+
+
+
+
 
 # enable oh-my-zsh Plugins
 export ZSH=$HOME/.oh-my-zsh
