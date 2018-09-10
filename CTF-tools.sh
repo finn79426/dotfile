@@ -103,7 +103,7 @@ sudo apt-get install -y binwalk
 
 # ngrok
 echo "Ngrok 需要手動下載 Binary"
-mkdir ~/Tools/ngrok
+mkdir ~/.Tools/ngrk
 
 # gdb
 git clone https://github.com/longld/peda.git --depth 1 ~/.Tools/peda
