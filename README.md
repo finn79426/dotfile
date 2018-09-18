@@ -44,3 +44,6 @@ CTF-tools.sh 內包含：
 	- build-essential
 	- libnum
 	- factordb-cli
+
+# Notice
+- 在執行 `CTF-tools.sh` 後，需要手動下載 ngrok 的程式到 `~/.Tools/Ngrok` 
